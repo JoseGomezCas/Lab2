@@ -29,7 +29,7 @@ class MainActivity : ComponentActivity() {
         }
     }
 
-    // Función para validar la contraseña
+    
     private fun esContrasenaValida(password: String): Boolean {
         val longitudValida = password.length > 8
         val tieneMayuscula = password.any { it.isUpperCase() }
@@ -64,7 +64,7 @@ class MainActivity : ComponentActivity() {
                         .height(120.dp)
                         .padding(bottom = 16.dp)
                 )
-                // Título
+                
                 Text(
                     text = "Login",
                     style = MaterialTheme.typography.headlineMedium,
@@ -81,7 +81,7 @@ class MainActivity : ComponentActivity() {
                 )
                 Spacer(modifier = Modifier.height(10.dp))
 
-                // Campo de contraseña
+                
                 OutlinedTextField(
                     value = password,
                     onValueChange = { password = it },
@@ -91,7 +91,7 @@ class MainActivity : ComponentActivity() {
                 )
                 Spacer(modifier = Modifier.height(20.dp))
 
-                // Botón de ingresar
+                
                 Button(
                     onClick = {
                         if (username.isNotBlank() && password.isNotBlank()) {
